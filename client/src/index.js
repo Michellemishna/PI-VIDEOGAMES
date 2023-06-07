@@ -8,7 +8,7 @@ import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 import axios from "axios";
-axios.defaults.baseURL="https://pi-videogames-back-3yx8.onrender.com/";
+axios.defaults.baseURL="https://pi-videogames-back-3yx8.onrender.com";
 
 ReactDOM.render(
   <React.StrictMode>

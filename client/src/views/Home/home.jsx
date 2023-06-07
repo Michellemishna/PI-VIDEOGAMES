@@ -1,5 +1,5 @@
 import Card from "../../components/Card/Card.jsx";
-import style from "./home.module.css"   //CSS
+import style from "./home.module.css"   
 
 import Paginado from "../../components/Paginator/Paginator.jsx";
 import Filters from "../../components/Filters/Filters.jsx";
