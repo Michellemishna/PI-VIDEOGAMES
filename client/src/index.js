@@ -8,7 +8,7 @@ import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 import axios from "axios";
-axios.defaults.baseURL="https://pi-videogames-tb91.vercel.app/";
+axios.defaults.baseURL="http://localhost:3001/";
 
 ReactDOM.render(
   <React.StrictMode>
