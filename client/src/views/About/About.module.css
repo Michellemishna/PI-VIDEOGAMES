@@ -1,0 +1,15 @@
+.About h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-content: center;
+    text-align: center;
+    font-size: 35px;
+}
+
+.About p {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

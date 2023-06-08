@@ -9,7 +9,7 @@
 }
 
 .contInfoFilters{
-    height: 19rem;
+    height: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,7 +26,7 @@
     justify-content:space-evenly;
     align-items: center;
     color: #000000;
-    background-color: #f4ff90;
+    background-color: #dddfd0;
 }
 
 .delButton{

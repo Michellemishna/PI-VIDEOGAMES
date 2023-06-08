@@ -1,27 +1,31 @@
 .globalCont{
-    background: url("https://static.vecteezy.com/system/resources/thumbnails/002/016/010/original/futuristic-threshold-with-reflections-on-wall-and-floor-free-video.jpg") ;
+    background: url("https://media.kingston.com/kingston/hero/ktc-hero-blog-gaming-cloud-gaming-advantages-disadvantages-lg.jpg");
     background-size: cover;
     width: 100vw;
-    height: 93vh;
+    height: 120vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
+    position: relative;
+}
+.globalCont label{
+    color: rgb(251, 251, 252);
+    font-weight:bold;
 }
 
 .contForm{
-    background: url("https://wallpapercave.com/wp/wp5631426.jpg");
+    background: rgba(54, 101, 172, 0.39);
     background-size: cover;
     box-shadow: -8px 9px 14px -3px rgba(0,0,0,0.75);
     margin-top: 2%;
     padding-top: 2px;
-    width: 50%;
+    width: 90%;
     height: 90%;
     
     border-radius: 10px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
 }
 
@@ -31,63 +35,37 @@
 }
 
 .formData{
-    color: white;
+    color: rgb(14, 13, 13);
     display: flex;
-    flex-direction: column;
-    width: 80%;
+    flex-direction:column;
+    width: 70%;
 }
 
 .contPlatforms, .contGenres{
     color: black;
     height: 10%;
-    background: url("https://img.freepik.com/free-vector/vibrant-summer-ombre-background-vector_53876-105765.jpg");
+    background:#8c8dbd88;
     background-size: cover;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
 }
 
-.infoValidation{
-    margin-top: 100px;
-    padding-left: 30px;
-    padding-right: 20px;
-    background: url("https://wallpaperaccess.com/full/3010046.jpg");
-    background-size: cover;
-    border-radius: 20px;
-    width: 30%;
-    height: 70%;
-    box-shadow: -8px 9px 14px -3px rgba(0,0,0,0.75);
-
-    display: flex;
-    flex-direction: column;
-}
-
-.titleInfo{
-    color:white;
-}
-
-.uList{
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 
 .validName, .validImg, .validDes, .validRel, .validRat, .validGen, .validPlat{
     padding-left: 10px;
     border-radius: 5px;
-    background-color:rgb(179, 255, 103);
+    background-color:rgba(179, 255, 103, 0.733);
+    font-size: 12px;
 }
 
-.errorName, .errorRel, .errorRat, .errorGen, .errorPlat{
+.errorName, .errorRel, .errorRat, .errorGen, .errorPlat, .errorImg , .errorDes{
     padding-left: 10px;
     border-radius: 5px;
-    background-color:rgb(255, 100, 100);
+    background-color:rgba(255, 100, 100, 0.562);
+    font-size: 12px;
+
 }
 
-.errorImg , .errorDes{
-    padding-left: 10px;
-    border-radius: 5px;
-    background-color:rgb(250, 241, 120);
-}

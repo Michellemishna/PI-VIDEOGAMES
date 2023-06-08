@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getGameByName } from "../../redux/actions";
+import style from "./Searchbar.module.css"
 
 const SearchBar = ({ setCurrentPage }) => {
   const [name, setName] = useState("");
@@ -17,7 +18,7 @@ const SearchBar = ({ setCurrentPage }) => {
   };
 
   return (
-    <div>
+    <div className={style.searchbar}>
       <input type="search" onChange={handleChange} />
       <button onClick={() => onSearch(name)}>Buscar</button>
     </div>

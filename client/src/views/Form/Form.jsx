@@ -76,12 +76,15 @@ const Form = ({allGenres, allPlatforms}) => {
                 <form onSubmit={handleSubmit} className={style.formData}>
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" onChange={handleChange} value={gameData.name}/>
+                    <p className={errors.name? style.errorName: style.validName} >Name: {errors.name? errors.name : "Información correcta."}</p>
 
                     <label htmlFor="image">Image URL:</label>
                     <input type="url" name="image" onChange={handleChange} value={gameData.image}></input>
+                    <p className={errors.image? style.errorImg: style.validImg}>Image: {errors.image? errors.image : "Información correcta."}</p>
 
                     <label htmlFor="description">Description:</label>
                     <textarea name="description" onChange={handleChange} value={gameData.description}></textarea>
+                    <p className={errors.description? style.errorDes : style.validDes}>Description: {errors.description? errors.description : "Información correcta."}</p>
 
                     <label htmlFor="platforms">Platforms:</label>
                     <div className={style.contPlatforms}>
@@ -89,12 +92,15 @@ const Form = ({allGenres, allPlatforms}) => {
                             return (<div>
                                 <input type="checkbox" onClick={(event) => AddPlatform(event)} value={plat}/>
                                 <label key={plat} htmlFor={plat}>{plat}</label>
+
                             </div>)     
                         })}
                     </div>
+                    <p className={errors.platforms? style.errorPlat: style.validPlat}>Platforms: {errors.platforms? errors.platforms : "Información correcta."}</p>
 
                     <label htmlFor="released">Released:</label>
                     <input type="date" name="released" onChange={handleChange} value={gameData.released}></input>
+                    <p className={errors.released? style.errorRel: style.validRel}>Released: {errors.released? errors.released : "Información correcta."}</p>
                     
                     <label htmlFor="rating">Rating</label>
                     <input 
@@ -102,36 +108,25 @@ const Form = ({allGenres, allPlatforms}) => {
                         name="rating" onBlur={(event)=> ratingInCero(event)}
                         onChange={handleChange} step="0.01"
                         value={gameData.rating}></input>
+                       <p className={errors.rating? style.errorRat: style.validRat}>Rating: {errors.rating? errors.rating : "Información correcta."}</p>
+
 
                     <label htmlFor="genres">Choose your favorites Genres:</label>      
+                        <p className={errors.genres? style.errorGen: style.validGen}>Genres: {errors.genres? errors.genres : "Información correcta."}</p>
                     <div className={style.contGenres}>
                         {allGenres?.map((genre)=>{
                                 return (<div>
                                     <input type="checkbox" onClick={(event) => AddGenres(event)} value={genre}/>
                                     <label htmlFor={genre}>{genre}</label>
+
                                 </div>)     
                             })}
                     </div>
                     {errors.flag === true? <button disabled>Create Game</button> : <button>Create Game</button>}
                 </form>
+                
             </div>
 
-            <div className={style.infoValidation}>
-                <div className={style.titleInfo}>
-                    <h2>📌 Validaciones:</h2>
-                    <p>- Deberán cumplirse las condiciones de validación para almacenar el nuevo videojuego
-                        en la base de datos, de lo contrario, los datos no se guardarán.</p>
-                </div>
-                <ul className={style.uList}>
-                    <li className={errors.name? style.errorName: style.validName} >Name: {errors.name? errors.name : "Información correcta."}</li>
-                    <li className={errors.image? style.errorImg: style.validImg}>Image: {errors.image? errors.image : "Información correcta."}</li>
-                    <li className={errors.description? style.errorDes : style.validDes}>Description: {errors.description? errors.description : "Información correcta."}</li>
-                    <li className={errors.released? style.errorRel: style.validRel}>Released: {errors.released? errors.released : "Información correcta."}</li>
-                    <li className={errors.rating? style.errorRat: style.validRat}>Rating: {errors.rating? errors.rating : "Información correcta."}</li>
-                    <li className={errors.genres? style.errorGen: style.validGen}>Genres: {errors.genres? errors.genres : "Información correcta."}</li>
-                    <li className={errors.platforms? style.errorPlat: style.validPlat}>Platforms: {errors.platforms? errors.platforms : "Información correcta."}</li>
-                </ul>
-            </div>
         </div>
     )
 }
