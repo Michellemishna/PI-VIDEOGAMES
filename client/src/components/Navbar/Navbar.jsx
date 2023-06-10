@@ -7,7 +7,7 @@ const Navbar = ({setCurrentPage}) => {
   
   return (
     <div className={style.contBarra}>
-      <div className={style.imgsCont}>
+      
         <a target="_blank" rel="noopener noreferrer" href='https://www.soyhenry.com/'>
           <img alt="img" className={style.imgs} src="https://startupeable.com/directorio/wp-content/uploads/2021/03/d4face92a7abc37a414e0bc3acf4ff23ec588438.png"/>
         </a>
@@ -23,18 +23,18 @@ const Navbar = ({setCurrentPage}) => {
         <a target="_blank" rel="noopener noreferrer" href='https://es.reactjs.org/'>
           <img alt="img" className={style.imgs} src="http://ibthemespro.com/docs/beny/img/side-nav/cmm4.png"/>
         </a>
-      </div> 
+    
       <div className={style.contOptions}>
         <Link to='/home'>
-            <p>🏡HOME</p>
+            <p>HOME</p>
         </Link>
 
         <Link to='/create'>
-            <p>🎮ADD YOUR GAME</p>
+            <p>ADD YOUR GAME</p>
         </Link>
 
         <Link to='/about'>
-            <p>📑ABOUT</p>
+            <p>ABOUT</p>
         </Link>
       </div>
       

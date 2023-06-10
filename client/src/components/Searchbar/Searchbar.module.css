@@ -5,7 +5,7 @@
     color:var(--text-color);
     
     transition: all 0.2s;
-    font-family: 'Roboto Mono', monospace;
+    font-family:'Barlow', monospace;;
 
 }
 

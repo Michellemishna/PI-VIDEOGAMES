@@ -25,7 +25,7 @@ const Home = ({allGenres,currentPage,setCurrentPage}) => {
 
             <div className={style.contVideogames}>
                 <div className={style.contPags}>
-                    <h2 className={style.Title}>🕹️ Videogames:</h2>
+                    <h2 className={style.Title}>Videogames:</h2>
                     <Paginado currentPage={currentPage} setCurrentPage={setCurrentPage} cantGames={games.length} gamesPag={gamesPag} />
                 </div>
                 <div className={style.ContCards}>
@@ -51,6 +51,7 @@ const Home = ({allGenres,currentPage,setCurrentPage}) => {
                         </div>  
                     }
                 </div>    
+                <Paginado currentPage={currentPage} setCurrentPage={setCurrentPage} cantGames={games.length} gamesPag={gamesPag} />
             </div>
         </div>
     )

@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+
 .contFilters{
     position: fixed;
     width: 11%;
+    margin-top: 105px;
     margin-left: 15px;
-
     display:flex;
     flex-direction: column;
     
+}
+.contFilters select{ 
+    border-radius: 5px;
+    font-family: 'Barlow', monospace;
+    font-weight: bold;
+
+
 }
 
 .contInfoFilters{
@@ -17,7 +26,7 @@
 }
 
 .closeFilter{
-    font-size: small;
+    font-size: var(--h2-font);
     font-weight: bold;
     border-radius: 15px;
     width: 100%;
@@ -29,10 +38,11 @@
     background-color: #dddfd0;
 }
 
-.delButton{
-    font-size:xx-small;
-    border-radius: 20px;
-    height: 2em;
-    display: flex;
+.contFilters button{
+    border-radius: 10px;
+    height: 4em;
     align-self: center;
+    background-color: var(--second-color);
+    font-weight: bold;
+    color: var(--text-color);
 }

@@ -30,7 +30,7 @@ const Filters = ({allGenres, setCurrentPage, filterInfo}) => {
     return (
         <div className={style.contFilters}>
             <p>Filtrar juegos por:</p>
-            <label>*Órden Alfabético:</label>
+            <label>Órden Alfabético:</label>
             <select name="Order" onChange={(event) => ordenamiento(event)}>
                 <option value= "AllGames">All Games</option>
                 <option value="Ascendente">Ascendente</option>
@@ -38,14 +38,14 @@ const Filters = ({allGenres, setCurrentPage, filterInfo}) => {
                 <option value="Rating">Rating</option>
             </select>
             <br/>
-            <label>*Almacenamiento:</label>
+            <label>Almacenamiento:</label>
             <select name="Datatype" onChange={(event) => filterDbAPI(event)} >
                 <option value= "AllGames">All Games</option>
                 <option value= "Stored Games">Stored Games</option>
                 <option value= "Created Games">Created Games</option>
             </select>
             <br/>
-            <label>*Géneros:</label>
+            <label>Géneros:</label>
             <select name="Filters" onChange={(event) => filterGenre(event)}>
                 <option value="Genres">All Genres</option>
                 {allGenres?.map((genre)=>{
@@ -63,7 +63,7 @@ const Filters = ({allGenres, setCurrentPage, filterInfo}) => {
                 : filterInfo.map((filter)=>{
                     return (
                         <div className={style.closeFilter}>
-                            <button className={style.delButton} onClick={()=>onCloseFilter(filter)}>❌</button>
+                            <button onClick={()=>onCloseFilter(filter)}>❌</button>
                             <p>{filter}</p>
                         </div>
                     )

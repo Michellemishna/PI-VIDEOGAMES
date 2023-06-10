@@ -8,20 +8,19 @@ box-sizing: border-box;
 :root{
   --bg-color: #22223B;
   --text-color: #fff;
-  --main-color: #4A4E69;
-  --second-color: #9A8C98;
+  --main-color: #3c436e;
+  --second-color: #a5389581;
   --other-color: #C9ADA7;
-  --h1-font: 3.2rem;
-  --h2-font: 3.5rem;
-  --p-font:1.1rem;
+  --h1-font: 50px;
+  --h2-font: 15px;
+  --p-font:12px;
 }
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Barlow', monospace;
+font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-color);
