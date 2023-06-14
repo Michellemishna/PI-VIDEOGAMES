@@ -61,7 +61,7 @@ const Form = ({allGenres, allPlatforms}) => {
     }
 
     const handleSubmit = (event) => {
-        if(gameData.name === "") event.preventDefault();      //Sirve para que la página no haga refresh por default.
+        event.preventDefault();      //Sirve para que la página no haga refresh por default.
         dispatch(createGames(gameData));
     }
     const ratingInCero = (event) =>{

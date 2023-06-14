@@ -47,7 +47,7 @@ function App() {
 
       <Route path="/detail/:idGame" component={Detail}/>
       
-      <Route path="/create">
+      <Route path="/form">
         <Form allGenres={allGenres} allPlatforms={allPlatforms}/>
       </Route>
     </div>  

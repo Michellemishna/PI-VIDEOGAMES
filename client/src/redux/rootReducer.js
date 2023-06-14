@@ -1,6 +1,7 @@
 import { GET_ALLGAMES, GET_GENRES, GET_GAME_DETAIL, GET_ALL_PLATFORMS, GET_GAME_BY_NAME,
   ORDER_GAMES, FILTER_GENDER_GAMES, FILTER_GAMES_DB_API, DELETE_GENRE,
   CLEAN_DETAIL, CLEAN_INFO_FILTERS} from "./actions";
+import { CREATE_VIDEOGAME } from "./typeActions";
 
 const initialState = {
   allGames: [],
@@ -34,6 +35,9 @@ const rootReducer = (state = initialState,action) =>{
       case GET_GAME_BY_NAME: return{
           ...state,
           filterGames: action.payload
+      }
+      case CREATE_VIDEOGAME: return{
+        ...state
       }
       case CLEAN_DETAIL: return {
           ...state,

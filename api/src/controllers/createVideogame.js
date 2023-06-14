@@ -3,11 +3,11 @@ const saveGenresOnBDD = require("./guardarGenresOnBDD.js");
 const findGenres = require("./findGenres.js");
 const { Op } = require("sequelize");
 
-const createVideogame = async ({id,name,description,genres,platforms,image,released,rating}) =>{    
+const createVideogame = async ({name,description,genres,platforms,image,released,rating}) =>{    
     const existVideogame = await Videogame.findAll({    //Verifico si el juego ya existe en la base de datos.
         where: {
             name: {
-                [Op.iLike]: `%${name}%`,    //Condiciono que el name del nuevo juego sea igual a alguno de la DB o lo contenga. 
+                [Op.iLike]: `${name}`,    //Condiciono que el name del nuevo juego sea igual a alguno de la DB o lo contenga. 
             }
         }
     })
@@ -15,7 +15,7 @@ const createVideogame = async ({id,name,description,genres,platforms,image,relea
     //Si ya hay un juego con ese nombre en la DB, error.
     if(existVideogame.length) throw new Error("There is already a game with that name.");   
     //Creo un nuego juego en la DB.
-    const newVideogame = await Videogame.create({id,name,description,platforms,image,released,rating}); 
+    const newVideogame = await Videogame.create({name,description,platforms,image,released,rating}); 
    
     if(await Genre.count() === 0){                  //Consulto si hay o no hay registros en la base de datos;
         const response = await findGenres();        //Si no hay registros, busco los géneros en la API.

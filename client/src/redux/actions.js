@@ -1,4 +1,5 @@
 import axios from "axios";
+import { CREATE_VIDEOGAME } from "./typeActions";
 
 //ACTION TYPES
 export const GET_ALLGAMES = "GET_ALLGAMES";
@@ -57,17 +58,17 @@ export const getGameByName = (name) => {
 };
 
 export const createGames = (videogame) => {
-  return function () {
-    axios
-      .post("/videogames", videogame)
-      .catch((error) =>
+  return async function (dispatch) {
+   try{
+    const response =(await axios .post("/videogames", videogame)).data; 
+   return dispatch({type: CREATE_VIDEOGAME, payload: response }), alert("You have a new Videogame");
+   } catch(error) {
         alert(
           "The game could not be created: it doesn't meet the validation requirements."
         )
-      );
   };
 };
-
+};
 export const filterGenres = (gender) => {
   return { type: FILTER_GENDER_GAMES, payload: gender };
 };

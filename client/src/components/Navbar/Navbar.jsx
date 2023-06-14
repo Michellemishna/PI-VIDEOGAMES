@@ -29,7 +29,7 @@ const Navbar = ({setCurrentPage}) => {
             <p>HOME</p>
         </Link>
 
-        <Link to='/create'>
+        <Link to='/form'>
             <p>ADD YOUR GAME</p>
         </Link>
 

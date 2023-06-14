@@ -58,7 +58,7 @@ const Filters = ({allGenres, setCurrentPage, filterInfo}) => {
             <button onClick={()=>showAllVideogames()}>Mostrar todos los Videojuegos</button>
             <p>Filtros Aplicados:</p>
             <div className={style.contInfoFilters}>
-                {filterInfo.length === 0? <li>Sin filtros.</li> 
+                {filterInfo.length === 0? <li></li> 
                 : (filterInfo.length > 6)? <li>Límite de filtros.</li>
                 : filterInfo.map((filter)=>{
                     return (
