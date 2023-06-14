@@ -33,3 +33,9 @@
 .contOptions p:hover {
     background-color: var(--other-color);
 }
+
+.imgs{
+    margin-top: 5px;
+    width: 30px;
+    border-radius: 20px;
+}
